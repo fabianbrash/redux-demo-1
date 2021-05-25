@@ -1,11 +1,11 @@
 export const deposit = (amount) => {
-    return {type: "DEPOSIT", amount: parseInt(amount)}
+    return {type: "DEPOSIT", amount: parseFloat(amount)}
 
 
 }
 
 export const withdraw = (amount) => {
-    return {type: "WITHDRAW", amount: parseInt(amount)}
+    return {type: "WITHDRAW", amount: parseFloat(amount)}
 
     
 }
@@ -23,3 +23,8 @@ export const deleteAccount = () => {
 
     
 }
+
+export const toggleAccount = () => {
+    return {type: "TOGGLE_ACCOUNT"}
+}
+

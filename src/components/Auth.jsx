@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { toggleAuth } from '../actions/authActions';
 
 
 const LoginStyle = styled.section`
@@ -7,10 +10,19 @@ const LoginStyle = styled.section`
 `
 
 const Auth = () => {
+    const auth = useSelector((state) => state.auth)
+    const dispatch = useDispatch();
+
+    const handleAuth = () => {
+        //dispatch({type: "TOGGLE_AUTH"})
+        dispatch(toggleAuth());
+    }
+
+    
     return (
         <div>
             <LoginStyle>
-            <button className="btn btn-info">Login</button>
+            <button onClick={handleAuth} className="btn btn-info">{auth.isLoggedIn ? "Logout" : "Login"}</button>
             </LoginStyle>
         </div>
     )

@@ -4,10 +4,12 @@ import { useSelector } from 'react-redux';
 const Balance = () => {
 
     const store = useSelector((state) => state)
+    console.log(store);
+    const balance = useSelector((state) => state.banking.balance)
 
     return (
         <div>
-            <h1>${store}</h1>
+            <h1>${balance}</h1>
         </div>
     )
 }

@@ -6,8 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { bankingReducer } from './reducers/bankingReducers';
+import { rootReducer } from './reducers/combineReducer';
 
-const store = createStore(bankingReducer)
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>

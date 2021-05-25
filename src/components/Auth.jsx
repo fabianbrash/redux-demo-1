@@ -5,8 +5,10 @@ import { useDispatch } from 'react-redux';
 import { toggleAuth } from '../actions/authActions';
 
 
+const mt = '1.25em';
+
 const LoginStyle = styled.section`
- margin-top: 20px;
+ margin-top: ${mt};
 `
 
 const Auth = () => {
